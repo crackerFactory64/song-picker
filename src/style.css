@@ -1,0 +1,62 @@
+body {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.5rem;
+  display: grid;
+  min-height: 100dvh;
+  text-align: center;
+}
+
+#root {
+  margin-block: auto;
+}
+
+.container {
+  margin-inline: auto;
+  width: calc(100% - 1em);
+}
+
+.hidden {
+  position: absolute;
+  top: -1000em;
+  visibility: hidden;
+}
+
+.app__message {
+  color: rgb(45, 212, 45);
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+.app__song {
+  font-size: 2rem;
+  line-height: 1.7;
+  min-height: 40dvh;
+  opacity: 0;
+}
+
+.app__song > div:nth-of-type(2) {
+  font-size: 1.5rem;
+}
+
+.app__message.show {
+  opacity: 100;
+  transition: opacity 200ms;
+}
+
+.app__song.show {
+  opacity: 100;
+  transition: opacity 1500ms;
+}
+
+.app > button {
+  background-color: rgb(45, 212, 45);
+  color: black;
+  border-radius: 0.5em;
+  border: 0;
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 1em;
+}
